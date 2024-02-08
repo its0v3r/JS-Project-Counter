@@ -1,0 +1,174 @@
+/* GLOBAL */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&family=Montserrat&display=swap");
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+:root {
+    /* colors */
+    --white: #e2e0ff;
+    --black: #13151b;
+
+    /* sizes */
+    --fixed-width: 75%;
+    --letter-spacing: 0.15rem;
+    --border-radius: 0.25rem;
+
+    /* misc */
+    --transition: 0.15s ease-in-out all;
+}
+
+button {
+    border: none;
+}
+
+/* MAIN */
+.main {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: var(--black);
+}
+
+.main-center {
+    position: relative;
+    width: 90vh;
+    max-width: 1000px;
+    display: grid;
+    place-items: center;
+    z-index: 2;
+}
+
+.counter-text {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    color: var(--white);
+    text-transform: capitalize;
+}
+
+.number-text {
+    font-size: 6rem;
+    margin-bottom: 2rem;
+    color: var(--white);
+}
+
+.btns-container {
+    display: flex;
+    gap: 0rem 2rem;
+}
+
+.btn {
+    letter-spacing: var(--letter-spacing);
+    padding: 0.5rem 1.8rem;
+    background-color: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn::first-letter {
+    text-transform: capitalize;
+}
+
+.btn:hover {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+/* RESET CONFIRMATION WINDOW */
+
+.background {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #000000e0;
+    display: grid;
+    place-items: center;
+    z-index: -1;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.confirmation-container {
+    background-color: var(--black);
+    width: 50%;
+    max-width: 620px;
+    padding: 2rem 0rem;
+    display: grid;
+    place-items: center;
+}
+
+.confirmation-container-center {
+    display: grid;
+    place-items: center;
+}
+
+.confirmation-container-center > p {
+    color: var(--white);
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 1.4rem;
+}
+
+.confirmation-container-center > p::first-letter {
+    text-transform: uppercase;
+}
+
+/* EASTER EGG */
+
+.easter-egg {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.easter-egg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://images.pexels.com/photos/17551547/pexels-photo-17551547/free-photo-of-capybara-near-the-fence.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.65;
+    animation: backgroundAnimation 5s ease-in-out infinite;
+}
+
+/* UTILS */
+.show {
+    opacity: 1;
+    z-index: 999;
+}
+
+.display-none {
+    display: none;
+}
+
+/* ANIMATIONS */
+@keyframes backgroundAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
