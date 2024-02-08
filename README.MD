@@ -4,7 +4,7 @@
 
 This project is a basic counter. It was written only using HTML, CSS, and vanilla Javascript.
 
-This project is heavily based on John Smilga's Color Flipper project on his HTML/CSS/JS course ([Codding Addict](https://www.youtube.com/c/codingaddict)
+This project is heavily based on John Smilga's Counter project on his HTML/CSS/JS course ([Codding Addict](https://www.youtube.com/c/codingaddict)
 ). But it might have a few or a lot of tweaks and new things added by me.
 
 # Project Features
