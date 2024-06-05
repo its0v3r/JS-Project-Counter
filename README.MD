@@ -13,3 +13,6 @@ This project is heavily based on John Smilga's Counter project on his HTML/CSS/J
 -   Clicking to reset the counter opens a dialog box for confirmation;
 -   Counter value changes based if the value is positive, negative or zero;
 -   An easter egg...
+
+# Project demo
+[Click here](https://its0v3r-js-project-counter.netlify.app/html/) to check a demo of this project!
